@@ -1,7 +1,8 @@
 body {
-  align-content: center;
-  background: lightgrey;
-  position: absolute;
+  /*display: inline-block;
+  text-align: center;*/
+  padding-top: 250px;
+  background-image: url(/Users/jerusmacbook/Documents/Projects/calculator/Images/desk-background-2376.jpg);
 }
 
 #calculator {
@@ -12,10 +13,12 @@ body {
   border-radius: 30px;
   font-family: sans-serif;
   padding-top: 40px;
+  margin-left: 700px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .display {
-  width: 189px;
+  width: 190px;
   height: 60px;
   background: lightgray;
   border: 2px silver solid;
@@ -30,7 +33,7 @@ body {
 button {
   border-radius: 12px;
   background-color: grey;
-  font-size: 24px;
+  font-size: 25px;
   width: 45px;
   font-family: sans-serif;
   padding: 5px;
@@ -46,5 +49,5 @@ button.allclear {
 
 .row {
   align: center;
-  padding: 2px;
+  padding: 3px;
 }

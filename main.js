@@ -1,13 +1,12 @@
+let buttons = document.querySelectorAll('#calculator button');
+let decimalAdd = false;
+let operators = ['/', '-', '*', '+'];
 
-var buttons = document.querySelectorAll('#calculator button');
-var decimalAdd = false;
-var operators = ['/', '-', '*', '+'];
-
-for (var i=0; i<buttons.length; i++) {
+for (let i=0; i<buttons.length; i++) {
   buttons[i].onclick = function(e) {
-    var input = document.querySelector('.display');
-    var inputValue = input.innerHTML;
-    var btnValue = this.innerHTML;
+    let input = document.querySelector('.display');
+    let inputValue = input.innerHTML;
+    let btnValue = this.innerHTML;
 
     //Clears display when AC is clicked
     if (btnValue == 'AC') {
@@ -17,8 +16,8 @@ for (var i=0; i<buttons.length; i++) {
 
     //Evaluates when equals is clicked
     else if (btnValue == '=') {
-      var equation = inputValue;
-      var lastChar = equation[equation.length-1];
+      let equation = inputValue;
+      let lastChar = equation[equation.length-1];
 
       //Check if lastChar is an operator or decimal
       if (operators.indexOf(lastChar) > -1 || lastChar == '.')
@@ -30,7 +29,7 @@ for (var i=0; i<buttons.length; i++) {
 
     //Shows button clicked in display
     else if (operators.indexOf(btnValue) > -1) {
-      var lastChar = inputValue[inputValue.length-1];
+      let lastChar = inputValue[inputValue.length-1];
       if (inputValue != '' && operators.indexOf(lastChar) == -1)
         input.innerHTML += btnValue;
       else if (inputValue == '' && btnValue == '-')
